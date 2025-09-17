@@ -10,7 +10,8 @@
   "dependencies": {
     "@grpc/grpc-js": "^1.14.0",
     "@grpc/proto-loader": "^0.8.0",
-    "mongodb": "^6.19.0",
-    "uuid": "^13.0.0"
+    "bson": "^4.7.2",
+    "mongodb": "^4.12.1",
+    "uuid": "^8.3.2"
   }
 }
