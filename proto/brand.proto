@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package brand;
+
+option java_package = "com.example.brand";
+option java_multiple_files = true;
+
+message Brand {
+  string id = 1;            // optional client-supplied id
+  string name = 2;
+  string description = 3;
+  repeated string tags = 4;
+}
+
+message CreateBrandRequest {
+  Brand brand = 1;
+}
+
+message CreateBrandResponse {
+  string id = 1;
+  string message = 2;
+  bool success = 3;
+}
+
+service BrandService {
+  rpc CreateBrand(CreateBrandRequest) returns (CreateBrandResponse);
+}
